@@ -1,0 +1,53 @@
+.allfilter-container{
+    background-image: url('../Images/sec.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 480px;
+    border: 1px solid;
+    display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 10%;
+}
+
+.allfilter-container2{
+    margin-top: 7%;
+    height: 52%;
+  width: 100%;
+  text-align: center; 
+}
+
+.allfilter-inside-container{
+   
+    width: 80%;
+    height:24%;
+    margin: auto;
+}
+
+.allfilter-row{
+    height: 100%;
+    width: 100%;
+    display: flex;
+ 
+}
+.filter-col{
+    width: 100%;
+    text-align: center;
+ 
+}
+.filter-col2{
+    width: 100%;
+    text-align: center;
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Vertically center items */
+    justify-content: center;
+    background-color: orange;
+}
+
+.filter-button{
+    cursor: pointer;
+    display: flex; /* Use Flexbox */
+  align-items: center; /* Vertically center items */
+  justify-content: center;
+  color: white !important;
+}

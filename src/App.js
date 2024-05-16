@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+
 import './App.css';
+import AllFilter from './LandingPage/AllFilter';
+import BelowBar from './LandingPage/BelowBar';
+import NavBar from './LandingPage/NavBar';
+import PopupBox from './PopupBox';
+import {BrowserRouter, Route} from "react-router-dom";
+import { Routes} from 'react-router';
+import Admin from './AdminPage/Admin';
+import LandingPage from './LandingPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+ 
+    
+    
+   
+  
+    <Routes>
+      <Route path='/admin' element={<Admin/>}/>
+      <Route path='/' element={<LandingPage/>}/>
+
+    </Routes>
+    
+    </>
   );
 }
 

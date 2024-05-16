@@ -1,0 +1,36 @@
+.nav-container{
+    border: 1px solid;
+    height: 8vh;
+}
+
+.nav-row{
+    display: flex;
+    width: 100%;
+padding: 10px;
+
+  
+}
+
+.nav-col1, .nav-col2,.nav-col3{
+    width: 33%;
+    font-size: xx-large;
+}
+
+.nav-col3{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.admin-btn{
+   cursor: pointer;
+    width: 38%;
+    text-align: center;
+    background-color: orange;
+    border-radius: 2px;
+    color: white;
+    text-decoration: none;
+}
+.home{
+    text-decoration: none;
+}
