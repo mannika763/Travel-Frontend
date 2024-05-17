@@ -5,11 +5,10 @@ import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 
 
-function Login() {
+function Login({onLoginSuccess}) {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [login, setLogin] = useState(false);
    
 
     const loginHandler = () => {
@@ -20,7 +19,7 @@ function Login() {
             console.log(response.data.message);
             if (response.status === 200) {
                 console.log("Login successful");
-                setLogin=true
+                onLoginSuccess();
                
             } else {
                 console.log("Incorrect email or password");
@@ -40,7 +39,7 @@ function Login() {
     <div className='login-box'>
  <Container style={{ height: '50%',width: "30%",position: "absolute",margin: "auto", justifyContent: 'center', alignItems: 'center'  }}>
       <h1 style={{textAlign: "center" }}>Login Form</h1>
-        <Form style={{ border: '1px solid #ccc', padding: '50px', borderRadius: '8px', height: '100%'}} >
+        <Form style={{ border: '1px solid #ccc', padding: '50px', borderRadius: '8px', height: '52%'}} >
           <Form.Group className="mb-8" controlId="formBasicEmail">
            
             <Form.Control

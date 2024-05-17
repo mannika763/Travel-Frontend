@@ -1,0 +1,18 @@
+.nav-container2{
+    height: 6vh;
+}
+
+.belowbar-row{
+width: 100%;
+padding: 13px;
+}
+
+.belowbar-col{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: grey;
+    text-transform: uppercase;
+    font-weight: 500;
+}

@@ -1,0 +1,16 @@
+{
+    "slides": [
+      {
+        "src": "https://cdn.pixabay.com/photo/2013/10/02/23/03/mountains-190055_640.jpg",
+        "alt": "Image 1 for carousel"
+      },
+      {
+        "src": "https://cdn.pixabay.com/photo/2024/01/05/14/00/ship-8489583_640.jpg",
+        "alt": "Image 2 for carousel"
+      },
+      {
+        "src": "https://cdn.pixabay.com/photo/2021/05/14/15/17/mountain-6253669_640.jpg",
+        "alt": "Image 3 for carousel"
+      }
+    ]
+  }

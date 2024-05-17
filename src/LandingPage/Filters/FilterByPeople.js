@@ -13,8 +13,8 @@ function FilterByPeople({onChange}) {
       ];
 
       const handleChange = (values) => {
-        console.log(values);
-        onChange(values) 
+        console.log(values.value);
+        onChange(values.value) 
       };
 
   return (

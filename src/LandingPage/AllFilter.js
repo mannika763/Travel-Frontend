@@ -9,6 +9,8 @@ import FilterByPeople from './Filters/FilterByPeople';
 import FilterByCost from './Filters/FilterByCost';
 import PopupBox from '../PopupBox';
 import axios from "axios";
+import Crousel from './Crousel';
+import slides from './CrouselData.json'
 
 
 function AllFilter() {
@@ -44,7 +46,9 @@ function AllFilter() {
 
   return (
     <>
+     
       <Container className='allfilter-container'>
+      
         <div className='allfilter-container2'>
 
 
@@ -66,6 +70,7 @@ function AllFilter() {
           </Row>
         </Container>
         </div>
+        <Crousel data={slides}/>
       </Container>
      
 

@@ -1,9 +1,8 @@
 .login-box{
    
-    height: 100vh;
+    height: 65vh;
     width: 100%;
-    position: absolute;
-    top: 0;
+  
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,25 +1,26 @@
 import React from 'react'
 import {Navbar,Nav, Container, Image, NavDropdown} from 'react-bootstrap';
+import './BelowBar.css'
 
 function BelowBar() {
   return (
     <>
-       <div class="nav-container d-flex">
-  <div class="row d-flex flex-wrap" style={{ display: "flex" }}>
-    <div class="col-3 ">
-     Home
+       <div className="nav-container2">
+  <div className="belowbar-row row " style={{ display: "flex" }}>
+    <div className="belowbar-col col-3 ">
+     Destinations
       
     </div>
    
     
-    <div class="col-3 ">
-      About
+    <div className="belowbar-col col-3 ">
+     Travel Themes
     </div>
-    <div class="col-3 ">
-     Contact
+    <div className="belowbar-col col-3 ">
+     Trip Search
     </div>
-    <div class="col-3 ">
-    Contact
+    <div className="belowbar-col col-3 ">
+    About Us
     </div>
   </div>
 </div>

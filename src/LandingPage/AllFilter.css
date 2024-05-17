@@ -1,26 +1,27 @@
 .allfilter-container{
-    background-image: url('../Images/sec.webp');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 480px;
-    border: 1px solid;
+   
+    /* height: 560px; */
+ height: 60vh;
     display: flex;
 justify-content: center;
 align-items: center;
-margin-bottom: 10%;
+
 }
 
 .allfilter-container2{
-    margin-top: 7%;
-    height: 52%;
+   
+    height: 22%;
   width: 100%;
   text-align: center; 
+  position: absolute;
+  
+  z-index: 2; 
 }
 
 .allfilter-inside-container{
    
     width: 80%;
-    height:24%;
+    /* height:15%; */
     margin: auto;
 }
 

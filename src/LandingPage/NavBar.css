@@ -1,36 +1,48 @@
 .nav-container{
-    border: 1px solid;
-    height: 8vh;
+    border-bottom: 1px solid rgba(100, 100, 111, 0.2);
+    height: 15vh;
 }
 
 .nav-row{
     display: flex;
-    width: 100%;
+   
 padding: 10px;
 
   
 }
 
-.nav-col1, .nav-col2,.nav-col3{
+.nav-col1 {
     width: 33%;
-    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nav-col2{
+    width: 57%;
 }
 
 .nav-col3{
+    width: 33%;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: space-evenly;
 }
 
 .admin-btn{
    cursor: pointer;
-    width: 38%;
-    text-align: center;
+   height: 3rem;
+    width: 31%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: orange;
-    border-radius: 2px;
+    border-radius: 5px;
     color: white;
     text-decoration: none;
 }
 .home{
     text-decoration: none;
+}
+.lottie-logo{
+    justify-content: space-evenly;
 }
