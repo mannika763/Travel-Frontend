@@ -10,6 +10,8 @@ import 'react-calendar/dist/Calendar.css';
 import Select from 'react-select';
 import { Container } from 'react-bootstrap';
 import axios from 'axios'
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 function PopupBox({onClose,selectedFilters}) {
 
@@ -82,6 +84,11 @@ function PopupBox({onClose,selectedFilters}) {
         axios.post("https://travel-backend-avx0.onrender.com/travel/makemytrip",formData).then((response)=>{
             console.log(response.status)
         })
+        Swal.fire({
+            title: "Thank You!",
+            text: "Thank you for inquiring about your trip of a lifetime with us. Our team of experts will be in touch soon to help craft the perfect vacation for you.",
+            icon: "success"
+          });
         setFormData({
             fullName: '',
             email: '',

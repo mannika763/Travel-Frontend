@@ -3,6 +3,8 @@ import './Login.css'
 import { Container, Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 
 function Login({onLoginSuccess}) {
@@ -18,16 +20,23 @@ function Login({onLoginSuccess}) {
         .then((response) => {
             console.log(response.data.message);
             if (response.status === 200) {
+           
                 console.log("Login successful");
                 onLoginSuccess();
                
-            } else {
+            } else  if (response.status === 404)  {
                 console.log("Incorrect email or password");
                
             }
         })
         .catch((error) => {
             console.error("Error:", error.response.data.message);
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Email or Passowrd is wrong!",
+              footer: '<a href="#">Why do I have this issue?</a>'
+            });
             // Handle other errors, e.g., display a generic error message
         });
        

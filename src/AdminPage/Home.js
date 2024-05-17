@@ -3,12 +3,14 @@ import axios from 'axios';
 import './Home.css'
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
+import Pagination from './Pagination';
 
 function Home() {
 
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
 
     useEffect(() => {
         // Define an async function to fetch data
@@ -18,6 +20,7 @@ function Home() {
                 const response = await axios.get('https://travel-backend-avx0.onrender.com/admin/dashboard');
                console.log(response.data)
                 setData(response.data);
+                setCurrentPage(1);
             } catch (error) {
                 // Handle any errors that occur during the fetch
                 setError(error);
@@ -39,11 +42,32 @@ function Home() {
         return <div>Error: {error.message}</div>;
     }
 
+    const recordsPerPage = 5;
+  const lastIndex = currentPage * recordsPerPage;
+  const firstIndex = lastIndex - recordsPerPage;
+  const records = data.slice(firstIndex, lastIndex);
+  const npage = Math.ceil(data.length / recordsPerPage);
+  const numbers = [...Array(npage + 1).keys()].slice(1);
 
+  const prePage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prevPage) => prevPage - 1);
+    }
+  };
+
+  const changePage = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const nextPage = () => {
+    if (currentPage < numbers.length) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
+  };
 
   return (
     <div>
-    
+    <div className='data-and-page'>
         <div className="table" id="results">
         <div className="theader">
           <div className="table_header">Full Name</div>
@@ -52,22 +76,20 @@ function Home() {
           <div className="table_header">Phone</div>{" "}
           <div className="table_header">Duration</div>
           <div className="table_header">Date</div>
-          <div className="table_header">Budget</div>
           <div className="table_header">Countries</div>
           <div className="table_header">Places</div>
-          <div className="table_header">People</div>
           <div className="table_header">Cost</div>
+          <div className="table_header">People</div>
         
         </div>
       
-      {data.map((curUser, index) => {
+      {records.map((curUser, index) => {
                     const {
                         fullName,
                         email,
                         phoneNumber,
                         duration,
                         date,
-                        budget,
                         selectedFilters,
                     } = curUser;
 
@@ -96,10 +118,7 @@ function Home() {
             <div className="table_cell">Date</div>
             <div className="table_cell">{new Date(date).toLocaleDateString()}</div>
           </div>
-          <div className="table_small">
-            <div className="table_cell">Budget</div>
-            <div className="table_cell">{budget}</div>
-          </div>
+        
 
           <div className="table_small">
             <div className="table_cell">Countries</div>
@@ -127,9 +146,14 @@ function Home() {
         </div>
       )})}
       </div>
-
+      <div className='pagination'>
+<Pagination   currentPage={currentPage}
+                    totalPages={npage}
+                    prePage={prePage}
+                    nextPage={nextPage}
+                    changePage={changePage}/></div>
     </div>
-
+    </div>
 
 
   )
