@@ -10,7 +10,7 @@
     align-items: center;
     flex-direction: column;
    background-color: rgba(0, 0, 0, 0.336);
-    
+    z-index: 3;
 }
 
 .popup-container {
@@ -65,24 +65,29 @@
  
 
  .PhoneInputInput{
-    height: 3rem;
+    height: 2.8rem;
     font-size: large;
     border-radius: 3px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     border: none;
+    margin-right: -5px;
+    margin-left: 10px;
  }
  .PhoneInputCountry{
     height: 3rem;
+    background-color: white;
  }
 
  .react-date-picker{
     height: 3.3rem;
     float: right;
+    background-color: white;
+    border: none;
+    margin-right: -5px;
 }
 
 .popup-btn{
    cursor: pointer;
-    border: 1px solid;
+   
     height: 3rem;
     display: flex; /* Use Flexbox */
     align-items: center; /* Vertically center items */
@@ -94,8 +99,26 @@
     width: 25%;
    display: block;
     cursor: pointer;
+    color: white;
+    font-weight: 500;
 }
 
 .close-button span {
     font-size: 41px; /* Increase the font size of the "x" */
 }
+.form-control.is-invalid {
+    border: 1px solid #dc3545; /* Bootstrap's danger color */
+    box-shadow: none; /* Remove custom box-shadow */
+}
+
+.form-control.is-invalid:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); /* Bootstrap's danger box shadow */
+}
+
+.PhoneInputInput.is-invalid {
+    border-color: #dc3545 !important; /* Bootstrap's danger color */
+  }
+  
+  .PhoneInputInput.is-invalid:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); /* Bootstrap's danger box shadow */
+  }

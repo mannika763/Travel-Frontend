@@ -14,7 +14,7 @@ function Login({onLoginSuccess}) {
     const loginHandler = () => {
         const user = { email, password };
         console.log(user)
-        axios.post("http://localhost:8080/adminpannel/login", user)
+        axios.post("https://travel-backend-avx0.onrender.com/adminpannel/login", user)
         .then((response) => {
             console.log(response.data.message);
             if (response.status === 200) {

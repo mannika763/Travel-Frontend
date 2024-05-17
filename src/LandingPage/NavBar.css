@@ -31,7 +31,8 @@ padding: 10px;
 .admin-btn{
    cursor: pointer;
    height: 3rem;
-    width: 31%;
+    width: 121px;
+   text-wrap: nowrap;
     display: flex;
     align-items: center;
     justify-content: center;

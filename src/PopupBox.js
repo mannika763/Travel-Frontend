@@ -19,8 +19,11 @@ function PopupBox({onClose,selectedFilters}) {
         phoneNumber: '',
         duration: '',
         date: new Date(),
-        budget: []
+        budget: ''
     });
+
+    const [emailError, setEmailError] = useState(false);
+    const [phoneError, setPhoneError] = useState(false);
 
     useEffect(() => {
         setFormData(prevData => ({
@@ -42,16 +45,41 @@ function PopupBox({onClose,selectedFilters}) {
             ...data,
              [name]: value
         }))
-       
+        if(name==="email"){
+            validateEmail(value)
+        }
+     
+        
         // console.log(name, value)
     };
 
+    const validateEmail = (email) => {
+        if (!email) {
+          setEmailError(true);
+        } else {
+          setEmailError(false);
+        }
+      };
 
+      const validateNumber = (num) => {
+        if (!num || num.replace(/\D/g, '').length < 10) {
+            console.log(num)
+            setPhoneError(true);
+        } else {
+            setPhoneError(false);
+        }
+      };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
-        axios.post("http://localhost:8080/travel/makemytrip",formData).then((response)=>{
+        // console.log(formData);
+        validateEmail(formData.email);
+        validateNumber(formData.phoneNumber)
+    if ((!emailError && formData.email) && (formData.phoneNumber && !phoneError) ) {
+      // Submit form
+      console.log('Form submitted', formData);
+   
+        axios.post("https://travel-backend-avx0.onrender.com/travel/makemytrip",formData).then((response)=>{
             console.log(response.status)
         })
         setFormData({
@@ -63,6 +91,10 @@ function PopupBox({onClose,selectedFilters}) {
             budget: [],
             selectedFilters: {}
         });
+    }
+    else{
+        console.log("Form not submitted",formData);
+    }
     };
 
     const handleBudgetChange = (value) => {
@@ -88,6 +120,9 @@ function PopupBox({onClose,selectedFilters}) {
             ...data,
             phoneNumber: value
         }))
+      
+            validateNumber(value)
+        
         // console.log(value)
     }
 
@@ -115,12 +150,13 @@ function PopupBox({onClose,selectedFilters}) {
 
                 <Form.Group className="form-group" controlId="formBasicEmail">
 
-                    <Form.Control className='form-control' type="email" placeholder="Enter email" name="email" value={formData.email} onChange={handleChange}  />
+                    <Form.Control className={`form-control ${emailError ? 'is-invalid' : ''}`} 
+                     type="email" placeholder="Enter email" name="email" value={formData.email} onChange={handleChange}  />
 
                 </Form.Group>
 
                 <Form.Group className="form-group" >
-                    <PhoneInput className='form-control'
+                    <PhoneInput  className={`form-control ${phoneError ? 'is-invalid' : ''}`}
                         international
                         placeholder="Enter phone number"
                         name="phoneNumber"

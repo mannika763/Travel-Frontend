@@ -6,13 +6,13 @@ import "./Crousel.css";
  const Crousel = ({ data }) => {
 
     const slides = data.slides || [];
-    console.log(slides)
+    // console.log(slides)
   const [slide, setSlide] = useState(0);
 
   const nextSlide = () => {
     setSlide((prevSlide) => {
       const next = prevSlide === slides.length - 1 ? 0 : prevSlide + 1;
-      console.log("Next slide index:", next); // Debugging
+    //   console.log("Next slide index:", next); // Debugging
       return next;
     });
   };

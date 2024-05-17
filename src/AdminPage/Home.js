@@ -15,7 +15,7 @@ function Home() {
         const fetchData = async () => {
             try {
                 // Make the API request
-                const response = await axios.get('http://localhost:8080/admin/dashboard');
+                const response = await axios.get('https://travel-backend-avx0.onrender.com/admin/dashboard');
                console.log(response.data)
                 setData(response.data);
             } catch (error) {
