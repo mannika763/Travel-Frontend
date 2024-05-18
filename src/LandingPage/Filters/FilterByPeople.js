@@ -26,12 +26,12 @@ function FilterByPeople({onChange}) {
 
   return (
     <>
-      <Select
+      <Select style={{ width: '100%',color: "black" }}
         className='people'
          placeholder="No. of travellers?" 
         onChange={handleChange}
         options={options}
-        style={{ width: '100%' }}
+        
       />
     </>
   )

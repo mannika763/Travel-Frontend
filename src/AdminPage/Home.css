@@ -1,22 +1,14 @@
 .table {
     display: table;
     text-align: center;
-    margin: 8% auto 0;
+    margin: 0% auto 0;
     border-collapse: separate;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     border-spacing: 0;
     padding: 23px;
   }
-  .table-heading{
-    text-align: center;
-    position: absolute;
-    left: 2%;
-    top: 22%;
-    font-size: larger;
-    font-weight: 600;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-  }
+ 
 
   .table_row {
     display: table-row;
@@ -117,6 +109,7 @@
     width: 100%;
     overflow-x: scroll;
     padding-left: 10px;
+    padding-top: 91px;
    }
 
    .bar-chart{
@@ -132,8 +125,26 @@
 
    .pie-chart{
     display: flex;
+    width: 100%;
     /* justify-content: center; */
    }
+.table-heading2{
+  display: flex;
+  justify-content: space-between;
+  width: 87%;
+  display: flex;
+  margin: auto;
+}
+
+.table-heading{
+  text-align: center;
+  
+  left: 2%;
+  top: 22%;
+  font-size: larger;
+  font-weight: 600;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 
    @media (max-width: 890px) {
     .parent{

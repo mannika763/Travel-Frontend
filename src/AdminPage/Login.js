@@ -33,11 +33,13 @@ function Login({onLoginSuccess}) {
                 onLoginSuccess();
                
             } else  if (response.status === 404)  {
+              setLoading(false)
                 console.log("Incorrect email or password");
                
             }
         })
         .catch((error) => {
+          setLoading(false)
             console.error("Error:", error.response.data.message);
             Swal.fire({
               icon: "error",

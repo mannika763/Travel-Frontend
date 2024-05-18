@@ -6,6 +6,7 @@ import 'react-dropdown/style.css';
 import Pagination from './Pagination';
 import { BarChart, PieChart , Pie , Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import Chart from "react-apexcharts"
+import Search from './Search';
 
 function Home() {
 
@@ -13,6 +14,7 @@ function Home() {
     const [chartData, setChartData] = useState([]);
     const [pieChartData , setPieChartData] = useState();
     const [loading, setLoading] = useState(true);
+    const [filteredData, setFilteredData] = useState([]);
     const [error, setError] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -25,6 +27,7 @@ function Home() {
                 const response = await axios.get('https://travel-backend-avx0.onrender.com/admin/dashboard');
                console.log("Response",response.data)
                 setData(response.data);
+                setFilteredData(response.data);
                 setChartData(countDateOccurrences(response.data))
                 setPieChartData(countMonthOccurrences(response.data))
                 console.log("Data formated" , countDateOccurrences(response.data))
@@ -43,6 +46,24 @@ function Home() {
         // Call the fetchData function
         fetchData();
     }, []); // Empty dependency array ensures this runs only once when the component mounts
+
+
+    const handleSearch = (searchTerm) => {
+      if (!searchTerm) {
+        setFilteredData(data);
+      } else {
+        console.log("ssssssssssss", searchTerm)
+        const searchWords = searchTerm.toLowerCase().split(" ");
+    const filtered = data.filter(item => {
+      const fullName = item.fullName.toLowerCase();
+      return searchWords.every(word => fullName.includes(word));
+    });
+        setFilteredData(filtered);
+      }
+      setCurrentPage(1); // Reset to first page after search
+    };
+
+
 
     function formatDate(dateString) {
       const date = new Date(dateString);
@@ -132,7 +153,7 @@ function Home() {
     const recordsPerPage = 5;
   const lastIndex = currentPage * recordsPerPage;
   const firstIndex = lastIndex - recordsPerPage;
-  const records = data.slice(firstIndex, lastIndex);
+  const records = filteredData.slice(firstIndex, lastIndex);
   const npage = Math.ceil(data.length / recordsPerPage);
   const numbers = [...Array(npage + 1).keys()].slice(1);
 
@@ -157,7 +178,9 @@ function Home() {
 
     <div className='parent'>
  <div className='table-and-page'>
- <div className='table-heading'>All Data related to Queries</div>
+  <div className='table-heading2'>
+ <div className='table-heading'>Explore All Queries: A Comprehensive Data Overview</div>
+ <Search onSearch={handleSearch}/></div>
         <div className="table" id="results">
        
         <div className="theader">

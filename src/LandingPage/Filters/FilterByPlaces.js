@@ -30,7 +30,7 @@ function FilterByPlaces({onChange}) {
             options={options}
             onChange={handleChange} 
           
-            style={{ width: '100%' }}
+            style={{ width: '100%', color: "black" }}
             contentRenderer={() => (
               <div>
                 {selectedValues.length > 0
