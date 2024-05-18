@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# Create My Trip Now
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Create My Trip Now is a web application that allows users to easily plan their trips by selecting their preferred country, places to visit, number of people, and budget. Additionally, the application provides an admin panel for managing user queries efficiently.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### User Interface
+- **Filters**: Users can filter their trip preferences by country, places, number of people, and budget.
+- **Popup Form**: After selecting trip preferences, users are prompted to fill in additional information such as name, phone number, email, and date of travel before submitting their query.
+- **Confirmation Message**: Upon submission, users receive a confirmation message indicating that their query has been received, and a customer executive will reach out to them shortly.
 
-### `npm start`
+## Admin Panel
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Click on the "Admin Panel" button in the navbar.
+2. Log in using the following credentials:
+   - **Email:** mannika2001verma@gmail.com
+   - **Password:** Travel@123
+- **Dashboard**: Once logged in, admins are redirected to the dashboard, where they can view all user queries in a table format.
+- **Charts**: The dashboard includes visual representations of user data in the form of bar and pie charts, displaying user information by month in percentages.
+- **Search Functionality**: Admins can search for specific users using the search box.
+- **Pagination**: User queries are displayed with pagination, showing 5 data entries per page for easy navigation.
+3. To logout, click on the "Logout" button next to the "Welcome, Admin" greeting in the navbar.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository from GitHub.
+   - **Frontend Repository**: [Travel-Frontend](https://github.com/mannika763/Travel-Frontend.git)
+   - **Backend Repository**: [Travel-Backend](https://github.com/mannika763/Travel-Backend.git)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Navigate to the project directory.
+3. Install dependencies using `npm install`.
+4. Configure environment variables as necessary.
 
-### `npm run build`
+**Note**: This project is based on the MERN (MongoDB, Express.js, React.js, Node.js) stack, with React as the frontend framework. Ensure you have Node.js and npm installed on your machine.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+1. Open the application in your web browser.
+2. Use the filters to select your trip preferences.
+3. Fill in the required information in the popup form.
+4. Submit your query and await confirmation.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Admin Panel
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Click on the "Admin Panel" button in the navbar.
+2. Log in using the provided credentials.
+3. Navigate to the dashboard to view user queries.
+4. Utilize the search box and pagination for efficient data management.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Additional Dependencies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+After cloning the repository and installing the project dependencies, make sure to install the following additional dependencies:
 
-## Learn More
+Dependency: @fortawesome/fontawesome-free
+Installation Command: npm install @fortawesome/fontawesome-free
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Dependency: @fortawesome/fontawesome-svg-core
+Installation Command: npm install @fortawesome/fontawesome-svg-core
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Dependency: @syncfusion/ej2-react-calendars
+Installation Command: npm install @syncfusion/ej2-react-calendars
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Dependency: axios
+Installation Command: npm install axios/npm install axios --force
 
-### Analyzing the Bundle Size
+Dependency: bootstrap
+Installation Command: npm install bootstrap/npm install bootstrap --force
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Dependency: font-awesome
+Installation Command: npm install font-awesome/npm install font-awesome --force
 
-### Making a Progressive Web App
+Dependency: lottie-react
+Installation Command: npm install lottie-react/npm install lottie-react --force
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Dependency: multiselect-react-dropdown
+Installation Command: npm install multiselect-react-dropdown/npm install multiselect-react-dropdown --force
 
-### Advanced Configuration
+Dependency: react-apexcharts
+Installation Command: npm install react-apexcharts/npm install react-apexcharts --force
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Dependency: react-bootstrap
+Installation Command: npm install react-bootstrapnpm install react-bootstrap --force
 
-### Deployment
+Dependency: react-bootstrap-date-picker
+Installation Command: npm install react-bootstrap-date-picker/npm install react-bootstrap-date-picker --force
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Dependency: react-date-picker
+Installation Command: npm install react-date-picker/npm install react-date-picker --force
 
-### `npm run build` fails to minify
+Dependency: react-dropdown-select
+Installation Command: npm install react-dropdown-select/npm install react-dropdown-select --force
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Dependency: react-flags-select
+Installation Command: npm install react-flags-select/npm install react-flags-select --force
+
+Dependency: react-icons
+Installation Command: npm install react-icons/npm install react-icons --force
+
+Dependency: react-phone-number-input
+Installation Command: npm install react-phone-number-input/npm install react-phone-number-input --force
+
+Dependency: react-router
+Installation Command: npm install react-router/npm install react-router --force
+
+Dependency: react-router-bootstrap
+Installation Command: npm install react-router-bootstrap/npm install react-router-bootstrap --force
+
+Dependency: react-scripts
+Installation Command: npm install react-scripts/npm install react-scripts --force
+
+Dependency: react-select
+Installation Command: npm install react-select/npm install react-select --force
+
+Dependency: recharts
+Installation Command: npm install recharts/npm install recharts --force
+
+Dependency: sweetalert2
+Installation Command: npm install sweetalert2/npm install sweetalert2 --force
+
+## Additional Resources
+
+- [React Documentation](https://legacy.reactjs.org/docs/getting-started.html)
