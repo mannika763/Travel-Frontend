@@ -1,9 +1,9 @@
-import React from 'react'
+import React,{useState} from 'react'
 import "./FilterByCost.css"
-import Select from 'react-select';
+import Select from 'react-dropdown-select';
 
 function FilterByCost({onChange}) {
-
+  const [selectedValues, setSelectedValues] = useState([]);
     const options = [
       { value: "1000$ - 2000$",label: "1000$ - 2000$" },
       { value: "1500$ - 2500$" ,label: "1500$ - 2500$" },
@@ -19,20 +19,30 @@ function FilterByCost({onChange}) {
       ];
 
     const handleChange = (values) => {
-        console.log(values.value); 
+        console.log(values.value);
+        setSelectedValues(values.value); 
         onChange(values.value);
       };
 
   return (
     <>
    
-        <Select
+        {/* <Select
            className='cost'
             options={options}
             onChange={handleChange} 
             placeholder="Budget per person?" 
             
-          />
+          /> */}
+          <Select
+            
+            options={options}
+            onChange={handleChange}
+            values={selectedValues}
+            placeholder="Budget per person?" 
+        style={{ width: '100%'}}
+       
+      />
           
     </>
   )

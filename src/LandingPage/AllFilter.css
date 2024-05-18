@@ -72,6 +72,13 @@ overflow: hidden;
     min-height: 38px !important;
 }
 
+@media (max-width: 1390px) {
+    .css-jznujr-ContentComponent {
+        font-size: small;
+    }
+    }
+    
+
 @media (max-width: 1090px) {
 .css-wmy1p7-ReactDropdownSelect  {
     box-sizing: border-box;

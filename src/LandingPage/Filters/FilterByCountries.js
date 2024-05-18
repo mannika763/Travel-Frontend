@@ -31,9 +31,9 @@ function FilterByCountries({ onChange }) {
                 onChange={handleChange}
                 values={selectedValues}
           
-            style={{ width: '100%' }}
+            style={{ width: '100%'}}
             contentRenderer={() => (
-              <div>
+              <div >
                 {selectedValues.length > 0
                   ? `${selectedValues.length} selected`
                   : 'Where do you want to go?'}

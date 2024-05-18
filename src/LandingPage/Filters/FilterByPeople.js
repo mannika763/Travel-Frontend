@@ -1,10 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import "./FilterByPeople.css"
-import Select from 'react-select';
+// import Select from 'react-select';
+import Select from 'react-dropdown-select';
 
 
 function FilterByPeople({onChange}) {
-
+  const [selectedValues, setSelectedValues] = useState([]);
 
     const options = [
       { value: "1 traveler",label: "1 traveler" },
@@ -21,18 +22,28 @@ function FilterByPeople({onChange}) {
 
       const handleChange = (values) => {
         console.log(values);
+        setSelectedValues(values.value)
         onChange(values.value) 
       };
 
   return (
     <>
-      <Select style={{ width: '100%',color: "black" }}
+      {/* <Select style={{ width: '100%',color: "black" }}
         className='people'
          placeholder="No. of travellers?" 
         onChange={handleChange}
         options={options}
         
-      />
+      /> */}
+        <Select
+            
+                options={options}
+                onChange={handleChange}
+                values={selectedValues}
+                placeholder="No. of travellers?" 
+            style={{ width: '100%'}}
+           
+          />
     </>
   )
 }
