@@ -86,7 +86,7 @@ function PopupBox({onClose,selectedFilters}) {
       // Submit form
       console.log('Form submitted', formData);
    
-        axios.post("http://localhost:8080/travel/makemytrip",formData).then((response)=>{
+        axios.post("https://travel-backend-avx0.onrender.com/travel/makemytrip",formData).then((response)=>{
             console.log(response.status)
         })
         Swal.fire({
