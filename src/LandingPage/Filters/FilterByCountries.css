@@ -33,3 +33,10 @@
   
     justify-content: center !important;
 }
+
+
+@media (max-width: 1390px) {
+    .css-1xmdsdm-ItemComponent ins {
+        font-size: small;
+    }
+    }
