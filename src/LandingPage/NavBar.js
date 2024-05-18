@@ -4,9 +4,17 @@ import {Navbar,Nav, Container,Row, Col} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import Lottie from 'lottie-react';
 import Logo from '../Images/travel logo.json';
+import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome CSS
 
 
 function NavBar({isLoggedIn}) {
+  const handleLogout = () => {{
+    console.log("clikc")
+    console.log(localStorage)
+        localStorage.removeItem("currentUser")
+        window.location.href = "/";
+  }}
+
   return (
    
 <Container className='nav-container'>
@@ -18,7 +26,7 @@ function NavBar({isLoggedIn}) {
     <Col className='nav-col3 '>
     {!isLoggedIn?(  <LinkContainer to="/admin">
         <Nav.Link className="admin-btn"><div style={{fontSize: "large"}}>Admin Pannel</div></Nav.Link>
-      </LinkContainer>):(<div>Welcome Admin</div>)}
+      </LinkContainer>):(<div className='admin'><i className="fas fa-user"></i>&nbsp;Welcome Admin&nbsp; <i class="fa-solid fa-power-off"style={{cursor: "pointer"}} onClick={handleLogout}></i></div>)}
       </Col>
      
   </Row>

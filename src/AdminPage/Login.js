@@ -2,26 +2,34 @@ import React, {useState} from 'react'
 import './Login.css'
 import { Container, Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
+
 import axios from 'axios';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
-import 'sweetalert2/src/sweetalert2.scss'
+import 'sweetalert2/src/sweetalert2.scss';
+import Lottie from 'lottie-react';
+import Loading from '../Images/6BlqWYS39T.json'
+
 
 
 function Login({onLoginSuccess}) {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [loading, setLoading] = useState(false);
    
-
+   
     const loginHandler = () => {
         const user = { email, password };
         console.log(user)
+        setLoading(true)
         axios.post("https://travel-backend-avx0.onrender.com/adminpannel/login", user)
         .then((response) => {
-            console.log(response.data.message);
+            console.log(response.data,response.status);
             if (response.status === 200) {
-           
-                console.log("Login successful");
+              setLoading(false)
+            const currentUser = response.data;
+          localStorage.setItem("currentUser", currentUser);
+             console.log("Login successful", localStorage);
                 onLoginSuccess();
                
             } else  if (response.status === 404)  {
@@ -41,7 +49,8 @@ function Login({onLoginSuccess}) {
         });
        
       };
-
+     
+  
 
   return (
     <>
@@ -63,13 +72,16 @@ function Login({onLoginSuccess}) {
 
           <Form.Group className="mb-8" controlId="formBasicPassword">
           
-            <Form.Control
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password"
-              style={{ marginBottom: '25px' }}
-            />
+       
+        <Form.Control
+          type='text'
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Password"
+          style={{ marginBottom: '25px' }}
+        />
+      
+      
           </Form.Group>
           <Form.Group className="mb-8" >
           <div className="login-btn" onClick={loginHandler}  style={{ width: '100%', marginTop: '20px', }}>
@@ -79,6 +91,7 @@ function Login({onLoginSuccess}) {
           </Form.Group>
         </Form>
       </Container> 
+      {loading && <div className='loading'><Lottie className='lottie-loading' animationData={Loading}/></div>}
       </div>
     </>
   )

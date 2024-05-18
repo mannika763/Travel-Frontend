@@ -56,10 +56,15 @@ function PopupBox({onClose,selectedFilters}) {
     };
 
     const validateEmail = (email) => {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
         if (!email) {
-          setEmailError(true);
+            setEmailError(true);
+        } else if (email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+            console.log("fffffffff")
+            setEmailError(true);
         } else {
-          setEmailError(false);
+            setEmailError(false);
         }
       };
 
@@ -81,7 +86,7 @@ function PopupBox({onClose,selectedFilters}) {
       // Submit form
       console.log('Form submitted', formData);
    
-        axios.post("https://travel-backend-avx0.onrender.com/travel/makemytrip",formData).then((response)=>{
+        axios.post("http://localhost:8080/travel/makemytrip",formData).then((response)=>{
             console.log(response.status)
         })
         Swal.fire({

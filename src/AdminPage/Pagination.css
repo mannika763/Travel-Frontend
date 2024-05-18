@@ -36,7 +36,7 @@ ul.pagination {
 .page-item a:first-of-type,
 .page-item a:last-of-type,
 .page-item .is-active {
-  background-color: #36A9AE;
+  background-color: #ADD8E6;
   color: #fff;
   font-weight: bold;
 }

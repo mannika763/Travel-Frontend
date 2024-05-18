@@ -57,11 +57,27 @@ overflow: hidden;
   color: white !important;
   font-size: medium;
 }
+.heading1{
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 2px;
+}
+.heading2{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 24px;
+}
 
 .css-wmy1p7-ReactDropdownSelect{
     min-height: 38px !important;
 }
 
+@media (max-width: 1090px) {
+.css-wmy1p7-ReactDropdownSelect  {
+    box-sizing: border-box;
+    font-size: smaller !important;
+}
+}
 
 @media (max-width: 890px) {
     .allfilter-inside-container .allfilter-row {
@@ -85,13 +101,20 @@ overflow: hidden;
         height: 31px;
     }
     .filter-col2{
-        margin-left: 2px;
+        margin-left: 1px;
     }
+   
   }
 
   @media (max-width: 580px)  {
     .allfilter-container2 {
         
         height: 45%;
+    }
+    .heading1{
+        font-size: 30px;
+    }
+    .heading2{
+        font-size: 20px;
     }
   }

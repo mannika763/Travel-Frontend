@@ -21,9 +21,9 @@ function Footer() {
         <div className='footer-col'>
         <div className='footer-col3'>Connect</div>
             <div className='footer-col31'>
-            <i class="fa fa-facebook" aria-hidden="true"></i></div>
+            <i class="fa-brands fa-square-instagram" style={{cursor: "pointer", color: "#bc2a8d"}}></i></div>
                 <div className='footer-col31'>
-                <i class="fa fa-instagram" aria-hidden="true"></i></div>
+                <i class="fa-brands fa-facebook" style={{cursor: "pointer", color: "skyblue"}}></i></div>
               
         </div>
       </div>

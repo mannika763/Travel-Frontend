@@ -5,7 +5,7 @@ import continents from './Countries'
 
 
 function FilterByCountries({ onChange }) {
-      
+  const [selectedValues, setSelectedValues] = useState([]);
 
         const options = continents.reduce((acc, continent) => {
             acc.push({ label: continent.name, value: continent.name, disabled: true }); // Disable continent names
@@ -16,20 +16,29 @@ function FilterByCountries({ onChange }) {
           }, []);
 
 
-    const handleChange = (values) => {
-        console.log(values); 
-        onChange(values);
-      };
+          const handleChange = (values) => {
+            setSelectedValues(values);
+            onChange(values);
+          };
+        
 
-  return (
-    <>
-   
-    <Select 
-            multi
-            options={options}
-            onChange={handleChange} 
-            placeholder="Where do you want to go?" 
+        
+          return (
+            <>
+              <Select
+                multi
+                options={options}
+                onChange={handleChange}
+                values={selectedValues}
+          
             style={{ width: '100%' }}
+            contentRenderer={() => (
+              <div>
+                {selectedValues.length > 0
+                  ? `${selectedValues.length} selected`
+                  : 'Where do you want to go?'}
+              </div>
+            )}
           />
 
 

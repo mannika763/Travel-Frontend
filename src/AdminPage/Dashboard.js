@@ -4,6 +4,7 @@ import { NavLink } from 'react-bootstrap'
 import Sidebar from './SidebarData';
 import Home from './Home';
 import Profile from './Profile';
+import "./Dashboard.css"
 
 
 function Dashboard() {
@@ -33,10 +34,10 @@ function Dashboard() {
   return (
    <>
    <div className="wrapper">
-            <Sidebar setCurrentView={setCurrentView} />
-            <div className="main_content">
+            {/* <Sidebar setCurrentView={setCurrentView} /> */}
+
                 {renderContent()}
-            </div>
+          
         </div>
         
    </>

@@ -48,3 +48,14 @@ padding: 10px;
 .lottie-logo{
     justify-content: space-evenly;
 }
+@media (max-width: 890px) {
+    .nav-col3 .admin{
+      font-size: 12px;
+      
+    }
+    .nav-col3{
+        width: 45%;
+    }
+  
+  
+}

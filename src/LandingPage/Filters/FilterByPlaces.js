@@ -11,12 +11,17 @@ function FilterByPlaces({onChange}) {
         { label: "Historical", value: "Historical" },
         { label: "Island", value: "Island" }
       ]);
+
+      const [selectedValues, setSelectedValues] = useState([]);
     
      
       const handleChange = (values) => {
         console.log(values); 
         onChange(values)
+        setSelectedValues(values)
       };
+    
+    
     
       return (
         <>
@@ -24,8 +29,15 @@ function FilterByPlaces({onChange}) {
             multi
             options={options}
             onChange={handleChange} 
-            placeholder="Your Interests?" 
+          
             style={{ width: '100%' }}
+            contentRenderer={() => (
+              <div>
+                {selectedValues.length > 0
+                  ? `${selectedValues.length} selected`
+                  : "Your Interests?"}
+              </div>
+            )}
           />
         </>
       );

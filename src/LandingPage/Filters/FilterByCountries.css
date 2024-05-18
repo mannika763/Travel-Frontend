@@ -5,4 +5,27 @@
     width: 100%!important;
     background-color: white !important;
 }
-  
+
+.css-1xmdsdm-ItemComponent ins {
+   
+    display: none;
+}
+
+.css-1xmdsdm-ItemComponent {
+   
+    color: black !important;
+    float: left;
+    display: flex;
+}
+
+.css-z2hyoe-ItemComponent.react-dropdown-select-item-selected {
+    background: rgba(128, 128, 128, 0.781) !important;
+   
+}
+
+.css-9ma7ck-OptionComponent {
+  color: black !important;
+    /* background: rgba(128, 128, 128, 0.781) !important; */
+    background-color: transparent !important;
+    border-radius: 12px !important;
+}

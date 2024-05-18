@@ -14,6 +14,7 @@
 }
 .footer-container{
     height: 17vh;
+    border-top: 1px solid rgba(100, 100, 111, 0.2);
 }
 .footer-col1, .footer-col2, .footer-col3{
     margin-left: 54px;
@@ -29,3 +30,15 @@
 .footer-col31{
     flex-direction: row;
 }
+
+
+@media (max-width: 580px)  {
+    .footer-col1, .footer-col2, .footer-col3 {
+        
+       font-size: 13px;
+    }
+    .footer-col11, .footer-col21, .footer-col31{
+       font-size: 11px;
+    }
+  
+  }

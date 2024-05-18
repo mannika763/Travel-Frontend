@@ -16,7 +16,7 @@
 .popup-container {
     border-radius: 5px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  
+    min-height: 500px;
     padding: 20px; /* Add padding for spacing */
     height: 55%;
     width: 25%;
@@ -114,7 +114,7 @@
     font-size: 41px; /* Increase the font size of the "x" */
 }
 .form-control.is-invalid {
-    /* border: 1px solid #dc3545; */
+    border: 1px solid #dc3545;
     box-shadow: none; /* Remove custom box-shadow */
 }
 
