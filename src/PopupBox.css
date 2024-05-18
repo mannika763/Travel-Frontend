@@ -1,6 +1,6 @@
 
 .popup{
-   border: 2px solid green;
+   /* border: 2px solid green; */
     height: 100vh;
     width: 100%;
     position: absolute;
@@ -20,7 +20,8 @@
     padding: 20px; /* Add padding for spacing */
     height: 55%;
     width: 25%;
-    background-color: #C8C8C8;
+    min-width: 362px;
+    background-color: #E5E4E2;
 
   }
 
@@ -28,6 +29,7 @@
     display: flex; /* Use Flexbox */
     align-items: center; /* Vertically center items */
     justify-content: center;
+    padding: 8px;
   }
   
   .popup-form {
@@ -60,7 +62,9 @@
  }
  .PhoneInput 
  {
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    background-color: white;
+    padding-left: 4px;
  }
  
 
@@ -69,12 +73,14 @@
     font-size: large;
     border-radius: 3px;
     border: none;
-    margin-right: -5px;
-    margin-left: 10px;
+   
+    /* margin-right: -5px;
+    margin-left: 10px; */
  }
  .PhoneInputCountry{
     height: 3rem;
     background-color: white;
+    padding-left: 7px;
  }
 
  .react-date-picker{
@@ -97,6 +103,7 @@
 }
 .close-button {
     width: 25%;
+    min-width: 362px;
    display: block;
     cursor: pointer;
     color: white;
@@ -107,7 +114,7 @@
     font-size: 41px; /* Increase the font size of the "x" */
 }
 .form-control.is-invalid {
-    border: 1px solid #dc3545; /* Bootstrap's danger color */
+    /* border: 1px solid #dc3545; */
     box-shadow: none; /* Remove custom box-shadow */
 }
 
@@ -121,4 +128,13 @@
   
   .PhoneInputInput.is-invalid:focus {
     box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); /* Bootstrap's danger box shadow */
+  }
+
+  .form-control::placeholder {
+    padding-left: 10px;
+  }
+
+  .css-b62m3t-container {
+    font-size: large;
+    font-weight: 400;
   }

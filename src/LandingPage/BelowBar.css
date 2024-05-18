@@ -1,5 +1,6 @@
 .nav-container2{
     height: 6vh;
+    min-height: 64px;
 }
 
 .belowbar-row{

@@ -2,6 +2,7 @@
    
     /* height: 560px; */
  height: 60vh;
+ min-height: 500px;
     display: flex;
 justify-content: center;
 align-items: center;
@@ -15,13 +16,13 @@ overflow: hidden;
   width: 100%;
   text-align: center; 
   position: absolute;
-  
+ 
   z-index: 2; 
 }
 
 .allfilter-inside-container{
    
-    width: 80%;
+    width: 82%;
     /* height:15%; */
     margin: auto;
 }
@@ -30,15 +31,16 @@ overflow: hidden;
     height: 100%;
     width: 100%;
     display: flex;
+    /* border: 2px solid blue; */
  
 }
 .filter-col{
-    width: 100%;
+    width: 20%;
     text-align: center;
- 
+    /* border: 2px solid green; */
 }
 .filter-col2{
-    width: 100%;
+    width: 20%;
     text-align: center;
     display: flex; /* Use Flexbox */
     align-items: center; /* Vertically center items */
@@ -47,9 +49,49 @@ overflow: hidden;
 }
 
 .filter-button{
+    width: 100%;
     cursor: pointer;
     display: flex; /* Use Flexbox */
   align-items: center; /* Vertically center items */
   justify-content: center;
   color: white !important;
+  font-size: medium;
 }
+
+.css-wmy1p7-ReactDropdownSelect{
+    min-height: 38px !important;
+}
+
+
+@media (max-width: 890px) {
+    .allfilter-inside-container .allfilter-row {
+      flex-direction: column;
+    }
+  
+    .allfilter-inside-container .filter-col,
+    .allfilter-inside-container .filter-col2 {
+      width: 100%;
+      
+    }
+  
+    .allfilter-inside-container .filter-button {
+      width: 100%;
+      text-align: center;
+    }
+    .allfilter-container{
+        height: 80vh;
+    }
+    .filter-button {
+        height: 31px;
+    }
+    .filter-col2{
+        margin-left: 2px;
+    }
+  }
+
+  @media (max-width: 580px)  {
+    .allfilter-container2 {
+        
+        height: 45%;
+    }
+  }

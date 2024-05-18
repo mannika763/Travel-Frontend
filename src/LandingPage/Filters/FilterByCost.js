@@ -27,7 +27,7 @@ function FilterByCost({onChange}) {
     <>
    
         <Select
-         
+           className='cost'
             options={options}
             onChange={handleChange} 
             placeholder="Budget per person?" 

@@ -158,14 +158,15 @@ function PopupBox({onClose,selectedFilters}) {
                 <Form.Group className="form-group" controlId="formBasicEmail">
 
                     <Form.Control className={`form-control ${emailError ? 'is-invalid' : ''}`} 
-                     type="email" placeholder="Enter email" name="email" value={formData.email} onChange={handleChange}  />
+                     type="email" placeholder="Email" name="email" value={formData.email} onChange={handleChange}  />
 
                 </Form.Group>
 
                 <Form.Group className="form-group" >
                     <PhoneInput  className={`form-control ${phoneError ? 'is-invalid' : ''}`}
                         international
-                        placeholder="Enter phone number"
+                        defaultCountry="IN"
+                        placeholder="Phone Number"
                         name="phoneNumber"
                         value={formData.phoneNumber}
                         onChange={handlePhoneChange}  />
@@ -194,7 +195,7 @@ function PopupBox({onClose,selectedFilters}) {
                     <Select
                         multi
                         options={options}
-                        placeholder="Budget per person?"
+                        placeholder="Budget Per Person?"
                         name="budget"
                         value={formData.budget}
                         onChange={handleBudgetChange}

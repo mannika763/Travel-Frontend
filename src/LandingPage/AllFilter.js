@@ -52,7 +52,7 @@ function AllFilter() {
         <div className='allfilter-container2'>
 
 
-        <h1 style={{color: "White",fontSize: "53px",
+        <h1 style={{color: "White",fontSize: "3rem",
     marginBottom: "2px"}}>Crafting memorable vacations for 20 years</h1>
         <div style={{color: "White",fontSize: "20px",marginBottom: "24px"}}>
 						Let Our Experts Plan Your Private, Tailor-Made and Secure Tour in 70+ Inspiring Destinations.

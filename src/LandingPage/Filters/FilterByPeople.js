@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "./FilterByPeople.css"
 import Select from 'react-select';
 
 
@@ -27,6 +27,7 @@ function FilterByPeople({onChange}) {
   return (
     <>
       <Select
+        className='people'
          placeholder="No. of travellers?" 
         onChange={handleChange}
         options={options}

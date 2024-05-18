@@ -46,7 +46,7 @@ function Login({onLoginSuccess}) {
   return (
     <>
     <div className='login-box'>
- <Container style={{ height: '50%',width: "30%",position: "absolute",margin: "auto", justifyContent: 'center', alignItems: 'center'  }}>
+ <Container style={{ height: '50%',width: "30%",  minWidth: "362px",position: "absolute",margin: "auto", justifyContent: 'center', alignItems: 'center'  }}>
       <h1 style={{textAlign: "center" }}>Login Form</h1>
         <Form style={{ border: '1px solid #ccc', padding: '50px', borderRadius: '8px', height: '52%'}} >
           <Form.Group className="mb-8" controlId="formBasicEmail">
