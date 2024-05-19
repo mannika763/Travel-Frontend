@@ -69,7 +69,7 @@ function PopupBox({onClose,selectedFilters}) {
         if (!email) {
             setEmailError(true);
         } else if (email.indexOf('@') === -1 || email.indexOf('.') === -1) {
-            console.log("fffffffff")
+            // console.log("fffffffff")
             setEmailError(true);
         } else {
             setEmailError(false);
@@ -95,7 +95,7 @@ function PopupBox({onClose,selectedFilters}) {
       console.log('Form submitted', formData);
    
         axios.post("https://travel-backend-avx0.onrender.com/travel/makemytrip",formData).then((response)=>{
-            console.log(response.status)
+            // console.log(response.status)
         })
         Swal.fire({
             title: "Thank You!",

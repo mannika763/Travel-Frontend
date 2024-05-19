@@ -32,7 +32,7 @@ function AllFilter() {
 
   const handleButtonClick = () => {
     setTripcreated(true);
-    console.log(selectedFilters,tripcreated);
+    // console.log(selectedFilters,tripcreated);
     // axios.post("http://localhost:8080/travel/makemytrip", selectedFilters).then((response) => {
     //     console.log(response.status, response.data.token);
     //   });
@@ -41,7 +41,7 @@ function AllFilter() {
 
   const handleClosePopup=()=>{
     setTripcreated(false);
-    console.log(tripcreated);
+    // console.log(tripcreated);
   }
 
   return (

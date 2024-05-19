@@ -31,8 +31,8 @@ function Home() {
                 setFilteredData(response.data);
                 setChartData(countDateOccurrences(response.data))
                 setPieChartData(countMonthOccurrences(response.data))
-                console.log("Data formated" , countDateOccurrences(response.data))
-                console.log("Month formated" , countMonthOccurrences(response.data))
+                // console.log("Data formated" , countDateOccurrences(response.data))
+                // console.log("Month formated" , countMonthOccurrences(response.data))
 
                 setCurrentPage(1);
             } catch (error) {
@@ -271,7 +271,7 @@ function Home() {
 
       <div className='chart-child'>
        <div className='bar-chart'>
-        <h1 className='barchart-heading'># of Users per day</h1>
+        <h1 className='barchart-heading'># of Users within the last 15 days</h1>
         <BarChart
           width={450}
           height={250}

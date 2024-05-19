@@ -9,9 +9,10 @@ import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome C
 
 function NavBar({isLoggedIn}) {
   const handleLogout = () => {{
-    console.log("clikc")
+    // console.log("clikc")
     console.log(localStorage)
         localStorage.removeItem("currentUser")
+        localStorage.removeItem("token")
         window.location.href = "/";
   }}
 
