@@ -11,20 +11,20 @@
     "build": "^0.1.4",
     "font-awesome": "^4.7.0",
     "lottie-react": "^2.4.0",
-    
     "react": "^18.3.1",
     "react-apexcharts": "^1.4.1",
     "react-bootstrap": "^2.10.2",
     "react-build-dist": "^0.0.8",
     "react-date-picker": "^11.0.0",
     "react-dom": "^18.3.1",
-
+    "react-dropdown": "^1.11.0",
     "react-dropdown-select": "^4.11.2",
     "react-flags-select": "^2.2.3",
     "react-phone-number-input": "^3.4.1",
     "react-router": "^6.23.1",
     "react-router-bootstrap": "^0.26.2",
     "react-scripts": "5.0.1",
+    "react-select": "^5.8.0",
     "recharts": "^2.12.7",
     "sweetalert2": "^11.11.0",
     "web-vitals": "^2.1.4"

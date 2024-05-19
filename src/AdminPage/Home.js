@@ -26,8 +26,9 @@ function Home() {
             try {
                 // Make the API request
                 const response = await axios.get('https://travel-backend-avx0.onrender.com/admin/dashboard');
-               console.log("Response",response.data)
+              //  console.log("Response",response.data)
                 setData(response.data);
+               
                 setFilteredData(response.data);
                 setChartData(countDateOccurrences(response.data))
                 setPieChartData(countMonthOccurrences(response.data))
@@ -53,7 +54,7 @@ function Home() {
       if (!searchTerm) {
         setFilteredData(data);
       } else {
-        console.log("ssssssssssss", searchTerm)
+       // console.log("ssssssssssss", searchTerm)
         const searchWords = searchTerm.toLowerCase().split(" ");
     const filtered = data.filter(item => {
       const fullName = item.fullName.toLowerCase();
@@ -246,16 +247,18 @@ function Home() {
             <div className="table_cell"> <Dropdown options={selectedFilters.places.map(i=>i.value)} placeholder="All Places" /></div>
           </div>
           <div className="table_small">
-            <div className="table_cell">Cost</div>
-            <div className="table_cell">{selectedFilters.cost}</div>
-          </div>
+    <div className="table_cell">Cost</div>
+    <div className="table_cell">
+        {selectedFilters.cost && selectedFilters.cost.length > 0 ? selectedFilters.cost[0].value : "N/A"}
+    </div>
+</div>
          
          
 
          
           <div className="table_small">
             <div className="table_cell">People</div>
-            <div className="table_cell">{selectedFilters.people}</div>
+            <div className="table_cell"> {selectedFilters.people && selectedFilters.people.length > 0 ? selectedFilters.people[0].value : "N/A"}</div>
           </div>
          
         </div>

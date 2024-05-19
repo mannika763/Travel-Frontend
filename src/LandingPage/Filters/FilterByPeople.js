@@ -21,9 +21,9 @@ function FilterByPeople({onChange}) {
       ];
 
       const handleChange = (values) => {
-        console.log(values);
-        setSelectedValues(values.value)
-        onChange(values.value) 
+        // console.log(values);
+        setSelectedValues(values)
+        onChange(values) 
       };
 
   return (

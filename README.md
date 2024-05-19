@@ -1,4 +1,20 @@
-# Create My Trip Now
+# Table of Contents
+
+1. [Introduction](#create-my-trip-now)
+2. [Features](#features)
+    2.1 [User Interface](#user-interface)
+3. [Installation](#installation)
+    3.1 [Frontend Repository](#frontend-repository)
+    3.2 [Backend Repository](#backend-repository)
+4. [Admin Panel](#admin-panel)
+5. [Usage](#usage)
+6. [Additional Dependencies](#additional-dependencies)
+7. [Additional Resources](#additional-resources)
+8. [Video Demo](#video-demo)
+
+
+
+## Create My Trip Now
 
 Create My Trip Now is a web application that allows users to easily plan their trips by selecting their preferred country, places to visit, number of people, and budget. Additionally, the application provides an admin panel for managing user queries efficiently.
 
@@ -8,6 +24,18 @@ Create My Trip Now is a web application that allows users to easily plan their t
 - **Filters**: Users can filter their trip preferences by country, places, number of people, and budget.
 - **Popup Form**: After selecting trip preferences, users are prompted to fill in additional information such as name, phone number, email, and date of travel before submitting their query.
 - **Confirmation Message**: Upon submission, users receive a confirmation message indicating that their query has been received, and a customer executive will reach out to them shortly.
+
+## Installation
+
+1. Clone the repository from GitHub.
+   - **Frontend Repository**: [Travel-Frontend](https://github.com/mannika763/Travel-Frontend.git)
+   - **Backend Repository**: [Travel-Backend](https://github.com/mannika763/Travel-Backend.git)
+
+2. Navigate to the project directory.
+3. Install dependencies using `npm install`.
+4. Configure environment variables as necessary.
+
+**Note**: This project is based on the MERN (MongoDB, Express.js, React.js, Node.js) stack, with React as the frontend framework. Ensure you have Node.js and npm installed on your machine.
 
 ## Admin Panel
 
@@ -23,20 +51,6 @@ Create My Trip Now is a web application that allows users to easily plan their t
 - **Pagination**: User queries are displayed with pagination, showing 5 data entries per page for easy navigation.
 
 3. To logout, click on the "Logout" button next to the "Welcome, Admin" greeting in the navbar.
-
-
-## Installation
-
-1. Clone the repository from GitHub.
-   - **Frontend Repository**: [Travel-Frontend](https://github.com/mannika763/Travel-Frontend.git)
-   - **Backend Repository**: [Travel-Backend](https://github.com/mannika763/Travel-Backend.git)
-
-2. Navigate to the project directory.
-3. Install dependencies using `npm install`.
-4. Configure environment variables as necessary.
-
-**Note**: This project is based on the MERN (MongoDB, Express.js, React.js, Node.js) stack, with React as the frontend framework. Ensure you have Node.js and npm installed on your machine.
-
 
 
 ## Usage
@@ -58,30 +72,24 @@ Create My Trip Now is a web application that allows users to easily plan their t
 After cloning the repository and installing the project dependencies, make sure to install the following additional dependencies:
 
 Dependency: axios
-Installation Command: npm install axios/npm install axios --force
-
-Dependency: bootstrap
-Installation Command: npm install bootstrap/npm install bootstrap --force
+Installation Command: npm install axios
 
 Dependency: lottie-react
-Installation Command: npm install lottie-react/npm install lottie-react --force
-
-Dependency: multiselect-react-dropdown
-Installation Command: npm install multiselect-react-dropdown/npm install multiselect-react-dropdown --force
+Installation Command: npm install lottie-react
 
 Dependency: react-apexcharts
-Installation Command: npm install react-apexcharts/npm install react-apexcharts --force
+Installation Command: npm install react-apexcharts
 
 Dependency: recharts
-Installation Command: npm install recharts/npm install recharts --force
+Installation Command: npm install recharts
 
 Dependency: sweetalert2
-Installation Command: npm install sweetalert2/npm install sweetalert2 --force
+Installation Command: npm install sweetalert2
 
 ## Additional Resources
 
 - [React Documentation](https://legacy.reactjs.org/docs/getting-started.html)
-- [Hosted Website](https://example.com) 
+- [Hosted Website](https://6649cb0592f7909bb988a766--harmonious-blancmange-ff1524.netlify.app) 
 
 ## Video Demo
 

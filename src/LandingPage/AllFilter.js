@@ -24,6 +24,7 @@ function AllFilter() {
   });
 
   const handleFilterChange = (filterName, values) => {
+    console.log("rrrrrrr",filterName,values)
     setSelectedFilters(prevState => ({
       ...prevState,
       [filterName]: values

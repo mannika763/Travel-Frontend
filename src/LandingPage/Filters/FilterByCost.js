@@ -19,9 +19,9 @@ function FilterByCost({onChange}) {
       ];
 
     const handleChange = (values) => {
-        console.log(values.value);
-        setSelectedValues(values.value); 
-        onChange(values.value);
+        // console.log(values);
+        setSelectedValues(values); 
+        onChange(values);
       };
 
   return (

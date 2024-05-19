@@ -16,7 +16,7 @@ function FilterByPlaces({onChange}) {
     
      
       const handleChange = (values) => {
-        console.log(values); 
+        // console.log(values); 
         onChange(values)
         setSelectedValues(values)
       };
