@@ -82,3 +82,7 @@ Installation Command: npm install sweetalert2/npm install sweetalert2 --force
 
 - [React Documentation](https://legacy.reactjs.org/docs/getting-started.html)
 - [Hosted Website](https://example.com) 
+
+## Video Demo
+
+- [Video](https://drive.google.com/file/d/1DInIht1VlO01oJlBMsmadgkj2C66SG22/view?usp=sharing)
