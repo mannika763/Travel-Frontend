@@ -28,6 +28,8 @@ function Login({onLoginSuccess}) {
             if (response.status === 200) {
               setLoading(false)
             const currentUser = response.data;
+            const token = response.data.token; // Assuming token is returned from server
+            localStorage.setItem("token", token); // Store token in local storage
           localStorage.setItem("currentUser", currentUser);
              console.log("Login successful", localStorage);
                 onLoginSuccess();

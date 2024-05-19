@@ -17,6 +17,7 @@ function Home() {
     const [filteredData, setFilteredData] = useState([]);
     const [error, setError] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
+    const [isLogged, setIsLogged]= useState(false);
 
     useEffect(() => {
         // Define an async function to fetch data
@@ -270,7 +271,7 @@ function Home() {
 
       <div className='chart-child'>
        <div className='bar-chart'>
-        <h1 className='barchart-heading'>Bar chart</h1>
+        <h1 className='barchart-heading'># of Users per day</h1>
         <BarChart
           width={450}
           height={250}

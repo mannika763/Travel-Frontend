@@ -33,7 +33,7 @@ function FilterByCountries({ onChange }) {
           
             style={{ width: '100%'}}
             contentRenderer={() => (
-              <div >
+              <div  style={{fontFamily: "Open Sans", color: "gray", fontSize: "small"}}>
                 {selectedValues.length > 0
                   ? `${selectedValues.length} selected`
                   : 'Where do you want to go?'}

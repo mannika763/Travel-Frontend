@@ -32,7 +32,7 @@ function FilterByPlaces({onChange}) {
           
             style={{ width: '100%', color: "black" }}
             contentRenderer={() => (
-              <div>
+              <div style={{fontFamily: "Open Sans", color: "gray", fontSize: "small"}}>
                 {selectedValues.length > 0
                   ? `${selectedValues.length} selected`
                   : "Your Interests?"}

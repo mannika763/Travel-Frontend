@@ -15,11 +15,15 @@ Create My Trip Now is a web application that allows users to easily plan their t
 2. Log in using the following credentials:
    - **Email:** mannika2001verma@gmail.com
    - **Password:** Travel@123
+   - **Note:** JWT token is used for authentication. Your login session lasts for one hour, so you don't have to log in repeatedly. Even if you refresh the page, you will remain logged in.
+   
 - **Dashboard**: Once logged in, admins are redirected to the dashboard, where they can view all user queries in a table format.
 - **Charts**: The dashboard includes visual representations of user data in the form of bar and pie charts, displaying user information by month in percentages.
 - **Search Functionality**: Admins can search for specific users using the search box.
 - **Pagination**: User queries are displayed with pagination, showing 5 data entries per page for easy navigation.
+
 3. To logout, click on the "Logout" button next to the "Welcome, Admin" greeting in the navbar.
+
 
 ## Installation
 
@@ -53,24 +57,11 @@ Create My Trip Now is a web application that allows users to easily plan their t
 
 After cloning the repository and installing the project dependencies, make sure to install the following additional dependencies:
 
-Dependency: @fortawesome/fontawesome-free
-Installation Command: npm install @fortawesome/fontawesome-free
-
-Dependency: @fortawesome/fontawesome-svg-core
-Installation Command: npm install @fortawesome/fontawesome-svg-core
-
-
-Dependency: @syncfusion/ej2-react-calendars
-Installation Command: npm install @syncfusion/ej2-react-calendars
-
 Dependency: axios
 Installation Command: npm install axios/npm install axios --force
 
 Dependency: bootstrap
 Installation Command: npm install bootstrap/npm install bootstrap --force
-
-Dependency: font-awesome
-Installation Command: npm install font-awesome/npm install font-awesome --force
 
 Dependency: lottie-react
 Installation Command: npm install lottie-react/npm install lottie-react --force
@@ -81,39 +72,6 @@ Installation Command: npm install multiselect-react-dropdown/npm install multise
 Dependency: react-apexcharts
 Installation Command: npm install react-apexcharts/npm install react-apexcharts --force
 
-Dependency: react-bootstrap
-Installation Command: npm install react-bootstrapnpm install react-bootstrap --force
-
-Dependency: react-bootstrap-date-picker
-Installation Command: npm install react-bootstrap-date-picker/npm install react-bootstrap-date-picker --force
-
-Dependency: react-date-picker
-Installation Command: npm install react-date-picker/npm install react-date-picker --force
-
-Dependency: react-dropdown-select
-Installation Command: npm install react-dropdown-select/npm install react-dropdown-select --force
-
-Dependency: react-flags-select
-Installation Command: npm install react-flags-select/npm install react-flags-select --force
-
-Dependency: react-icons
-Installation Command: npm install react-icons/npm install react-icons --force
-
-Dependency: react-phone-number-input
-Installation Command: npm install react-phone-number-input/npm install react-phone-number-input --force
-
-Dependency: react-router
-Installation Command: npm install react-router/npm install react-router --force
-
-Dependency: react-router-bootstrap
-Installation Command: npm install react-router-bootstrap/npm install react-router-bootstrap --force
-
-Dependency: react-scripts
-Installation Command: npm install react-scripts/npm install react-scripts --force
-
-Dependency: react-select
-Installation Command: npm install react-select/npm install react-select --force
-
 Dependency: recharts
 Installation Command: npm install recharts/npm install recharts --force
 
@@ -123,3 +81,4 @@ Installation Command: npm install sweetalert2/npm install sweetalert2 --force
 ## Additional Resources
 
 - [React Documentation](https://legacy.reactjs.org/docs/getting-started.html)
+- [Hosted Website](https://example.com) 

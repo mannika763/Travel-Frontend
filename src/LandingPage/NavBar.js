@@ -26,7 +26,7 @@ function NavBar({isLoggedIn}) {
     <Col className='nav-col3 '>
     {!isLoggedIn?(  <LinkContainer to="/admin">
         <Nav.Link className="admin-btn"><div style={{fontSize: "large"}}>Admin Pannel</div></Nav.Link>
-      </LinkContainer>):(<div className='admin'><i className="fas fa-user"></i>&nbsp;Welcome Admin&nbsp; <i class="fa-solid fa-power-off"style={{cursor: "pointer"}} onClick={handleLogout}></i></div>)}
+      </LinkContainer>):(<div className='admin'><i className="fas fa-user"></i>&nbsp;Welcome, Admin&nbsp; <i class="fa-solid fa-power-off"style={{cursor: "pointer", ":hover": { color: "orange" } }} onClick={handleLogout}></i></div>)}
       </Col>
      
   </Row>

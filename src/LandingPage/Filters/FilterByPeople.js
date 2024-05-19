@@ -41,7 +41,7 @@ function FilterByPeople({onChange}) {
                 onChange={handleChange}
                 values={selectedValues}
                 placeholder="No. of travellers?" 
-            style={{ width: '100%'}}
+            style={{ width: '100%',fontFamily: "Open Sans", color: "gray", fontSize: "small"}}
            
           />
     </>

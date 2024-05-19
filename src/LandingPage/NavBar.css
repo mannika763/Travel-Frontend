@@ -48,6 +48,10 @@ padding: 10px;
 .lottie-logo{
     justify-content: space-evenly;
 }
+
+.fa-power-off:hover {
+    color: orange;
+  }
 @media (max-width: 890px) {
     .nav-col3 .admin{
       font-size: 12px;
